@@ -57,9 +57,62 @@ Note : File name should be with HDL Extension
 
 •	fa_4bit_test.v → Test bench 
 
-*/Program to design 4 bit adder by instantiating 1 bit Full adder.also add test bench program */
-Developed by: Register Number*/
+**Verilog code for 1 Bit Full adder** <br>
+```
 
+module full_adder(A,B,CIN,S,COUT);
+input A,B,CIN;
+output S,COUT;
+assign S=A^B^CIN;
+assign COUT=(A&B) | (CIN&(A^B));
+endmodule
+
+```
+
+**Verilog Code for 4 Bit Full Adder** <br>
+```
+
+module fulladd_4bit(A,B,C0,S,C4);
+input C0,[3:0] A,B;
+output C4,[3:0] S;
+wire C1,C2,C3;
+full_adder fa0 (A[0],B[0],C0,S[0],C1);
+full_adder fa1 (A[1],B[1],C1,S[1],C2);
+full_adder fa2 (A[2],B[2],C2,S[2],C3);
+full_adder fa3 (A[3],B[3],C3,S[3],C4);
+endmodule
+
+```
+
+
+**a) Verify the Functionality** <br>
+<br>
+&emsp;&emsp;Three Codes shall be written for implementation of 4-bit Adder as follows, <br>
+
+&emsp;&emsp;&emsp;&emsp;fa.v → Single Bit 3-Input Full Adder [Sub-Module / Function] <br>
+
+&emsp;&emsp;&emsp;&emsp;fa_4bit.v → Top Module for Adding 4-bit Inputs. <br>
+
+&emsp;&emsp;&emsp;&emsp;fa_4bit_test.v → Test bench <br>
+<br>
+
+**Testbench Code for 4 bit Full Adder** <br>
+```
+
+module test_4bit;
+reg [3:0] A;
+reg [3:0] B; reg C0;
+wire [3:0] S; wire C4;
+fulladd_4bit dut (A,B,C0,S,C4);
+initial begin
+A=4'b0011;B=4'b0011;C0=1'b0;
+#10;  A=4'b1011;B=4'b0111;C0=1'b1;
+#10; A=4'b1111;B=4'b1111;C0=1'b1;
+#10; $finish;
+end
+endmodule
+
+```
 ## Functional Simulation: 
 
 	Invoke the cadence environment by type the below commands 
@@ -72,8 +125,6 @@ Developed by: Register Number*/
       
 	After this you can see the window like below 
 
-### Fig 3:Invoke the Cadence Environment
-
 	To Launch Simulation tool 
 
 •	linux:/> nclaunch -new& // “-new” option is used for invoking NCVERILOG for the first time for any design 
@@ -84,11 +135,15 @@ or
 
 	It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
 
+<img width="950" alt="exp1 1" src="https://github.com/user-attachments/assets/5e6f7ca9-4a4a-4e3b-9ef0-af1e35273307">
+
 ### Fig 4:Setting Multi-step simulation
 
 	Select Multiple Step and then select “Create cds.lib File” .
 
 	Click the cds.lib file and save the file by clicking on Save option 
+
+<img width="952" alt="exp1 2" src="https://github.com/user-attachments/assets/1f1c67cb-f59c-4b9b-999d-ee594a34c512">
 
 ### Fig 5:cds.lib file Creation
 
@@ -112,6 +167,8 @@ or
 
 	To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
 
+<img width="959" alt="exp1 3" src="https://github.com/user-attachments/assets/1800dd57-8a63-4651-a39f-d0ca1cba877e">
+
 ### Fig 7: Nclaunch Window
 
 ## Step 1: Compilation:– Process to check the correct Verilog language syntax and usage 
@@ -131,6 +188,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
 
+<img width="959" alt="exp1 3" src="https://github.com/user-attachments/assets/2490e515-e8d0-46d8-b67c-9d601c11228e">
 ### Fig 8: Compiled database in worklib
 
 	After compilation it will come under worklib you can see in right side window
@@ -154,8 +212,6 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
    
 	After elaboration the file will come under snapshot. Select the test bench and elaborate it.
 
-### Fig 9: Elaboration Launch Option
-
 ## Step 3: Simulation: – Simulate with the given test vectors over a period of time to observe the output behaviour. 
 
 	Inputs: Compiled and Elaborated top level module name 
@@ -166,10 +222,13 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 
 	Steps for simulation – Run the simulation command with simulator options
 
+<img width="955" alt="exp1 4" src="https://github.com/user-attachments/assets/f84f11c1-8aa9-4648-8b2f-88c1cae6486b">
 ### Fig 10: Design Browser window for simulation
 
+<img width="959" alt="exp1 5" src="https://github.com/user-attachments/assets/4bcfa68d-7451-43ac-9f2b-6cd6d6783673">
 ### Fig 11: Launching Simulation Waveform WindowSimulation Waveform Window
 
+<img width="959" alt="exp1 6" src="https://github.com/user-attachments/assets/592b845e-5c6d-4312-9a7e-430348ff80fb">
 ### Fig 12: Simulation Waveform Window
 
 ### Result:
