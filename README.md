@@ -135,7 +135,8 @@ or
 
 	It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
 
-<img width="950" alt="exp1 1" src="https://github.com/user-attachments/assets/5e6f7ca9-4a4a-4e3b-9ef0-af1e35273307">
+![WhatsApp Image 2024-11-29 at 21 16 23_98bef5e3](https://github.com/user-attachments/assets/c5de6348-bef4-4f1b-bee6-41ff4c04a024)
+
 
 ### Fig 4:Setting Multi-step simulation
 
@@ -143,7 +144,6 @@ or
 
 	Click the cds.lib file and save the file by clicking on Save option 
 
-<img width="952" alt="exp1 2" src="https://github.com/user-attachments/assets/1f1c67cb-f59c-4b9b-999d-ee594a34c512">
 
 ### Fig 5:cds.lib file Creation
 
@@ -228,7 +228,8 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 <img width="959" alt="exp1 5" src="https://github.com/user-attachments/assets/4bcfa68d-7451-43ac-9f2b-6cd6d6783673">
 ### Fig 11: Launching Simulation Waveform WindowSimulation Waveform Window
 
-<img width="959" alt="exp1 6" src="https://github.com/user-attachments/assets/592b845e-5c6d-4312-9a7e-430348ff80fb">
+![WhatsApp Image 2024-11-29 at 21 54 24_4c588cf7](https://github.com/user-attachments/assets/f6c403e7-b616-4ebc-a928-5cfe397c9e39)
+
 ### Fig 12: Simulation Waveform Window
 
 ### Result:
