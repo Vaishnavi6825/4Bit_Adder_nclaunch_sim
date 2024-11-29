@@ -167,7 +167,7 @@ or
 
 	To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
 
-<img width="959" alt="exp1 3" src="https://github.com/user-attachments/assets/1800dd57-8a63-4651-a39f-d0ca1cba877e">
+![image](https://github.com/user-attachments/assets/7a691cb0-ba19-4192-8d7b-0f4b0fb42b3f)
 
 ### Fig 7: Nclaunch Window
 
@@ -187,8 +187,9 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 Left side select the file and in Tools : launch verilog compiler with current selection will get enable. Click it to compile the code 
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
+![WhatsApp Image 2024-11-29 at 21 43 02_26dafeb1](https://github.com/user-attachments/assets/03431012-9eb8-406b-ada9-91d71da9e490)
 
-<img width="959" alt="exp1 3" src="https://github.com/user-attachments/assets/2490e515-e8d0-46d8-b67c-9d601c11228e">
+
 ### Fig 8: Compiled database in worklib
 
 	After compilation it will come under worklib you can see in right side window
