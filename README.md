@@ -154,8 +154,8 @@ or
 •	We are simulating verilog design without using any libraries 
 
 •	A Click “OK” in the “nclaunch: Open Design Directory” window as shown in below figure 
+![WhatsApp Image 2024-11-29 at 21 42 28_2ccd5a83](https://github.com/user-attachments/assets/c1faa4f8-d3c5-4ffd-8778-1d95012fb0f8)
 
-![image](https://github.com/user-attachments/assets/781b297a-11e9-4140-89c5-ee3b0d15bbd4)
 
 ### Fig 6: Selection of Don’t include any libraries
 
